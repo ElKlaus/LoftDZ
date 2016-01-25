@@ -306,14 +306,35 @@ body {
 }
 
 .skills-list {
-	list-style: circle;
+	list-style: none;
 	font-family: 'open_sanssemibold';
 	font-size: 9px;
 	text-transform:uppercase;
+	color: #1e7465;
 }
 
 .skills-points {
-	float: right;
+	display: inline-block;
+    float: left;
+    background-image: url('../img/marker_bg.png');
+    background-repeat: no-repeat;
+    background-position: -3px;
+    border-radius: 9px 3px 3px 7px;
+    border: 1px solid #727070;
+    padding: 0px 7px 0px 7px;
+
+}
+
+.skills-list>span {
+    background: url(../pic/button-back-bg.png) 0 0 repeat-x;
+    display: block;
+    height: 29px;
+    padding: 0 3px;
+    font-family: open_sanssemibold, sans-serif;
+    font-size: 11px;
+    color: #1e7465;
+    text-decoration: none;
+    margin-bottom: 5px;	
 }
 
 .expirience {
