@@ -1,36 +1,68 @@
-.work_list {
-    padding: 0 auto;
-    margin: 40px auto 80px;
-    text-align: left;
+.work-list-active {
+    background: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+    box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.35);
 }
 
-.work_list_points {
+.work-list-active:hover {
+    background: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+    box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+.work-list {
+    padding: 0 auto;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.work-list li:nth-child(3n+3) {
+	margin-right: 0px;
+}
+
+.work-list-points {
     position: relative;
     display: inline-block;
-    width: 166px;
+    width: 165px;
     border-radius: 4px;
     overflow: hidden;
     vertical-align: top;
-    border: 1px solid #d2d2d2;
+    border: 1px solid #d2d2d2;    
+    margin-right: 28px;
 }
 
-.list_of_works_text {
+.work-list-link {
     display: block;
+    text-decoration: none;
+    font-family: OpenSans-Semibold, sans-serif;
+    font-size: 13px;
+    line-height: 22px;
+    color: #727070;
+    background-color: #f2f2f2;
+    border-top: 1px solid #d2d2d2;
+    margin: 0;
+    text-align: center;
+    height: 34px;
+    padding-top: 5px;
+}
+
+
+
+.work-list-text {
+    display: block;
+    color: #727070;
+    background-color: #fff;
+    margin: 0;    
+    padding: 5px;    
     font-family: open_sanslight, sans-serif;
     font-size: 12px;
     line-height: 16px;
-    color: #727070;
-    background-color: #fff;
-    margin: 0;
-    text-align: center;
-    padding: 5px;
+	text-align: center;
 }
 
 /*Начало */
 .projects-item {
-    width: 183px;  
     position: relative;
-    margin: 20px;
 }
 .projects-item .project-img {
     box-sizing: border-box;
@@ -40,7 +72,8 @@
 .projects-item .zoom-wrapper {
     position: absolute;
     width: 100%;
-    top: 55px;
+    top: 51px;
+    left: 0px;
     text-align: center;
     transform: scale(0);
     -webkit-transform: scale(0);
@@ -56,8 +89,8 @@
     border: 1px solid #eff3f7;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    padding: 0 4px;
+    border-radius: 4px;
+    padding: 0px 5px 3px;
 }
 .projects-item:hover .project-img{
 	-moz-opacity: 0.20;
@@ -65,7 +98,30 @@
 	filter: alpha(opacity=20);
 }
 .projects-item:hover .hover-img{
-	background-color: rgb( 108, 108, 164);
+	background-color: rgb(136, 134, 134);
 }
 
 /*Конец*/
+
+
+.link-add-work {
+	height: 131px;
+}
+
+.link-add-project {
+    display: inline-block;
+    text-decoration: none;
+    margin: auto;
+    padding-top: 104px;
+    margin-top: 25px;
+}
+
+.hover-img-bg {
+    font-size: 14px;
+    line-height: 22px;
+    color: #727070;
+    position: relative;
+    text-align: center;
+    background: url(../jpg/about_icons.png) center 0 no-repeat;
+    font-family: OpenSans-Semibold, sans-serif;
+}

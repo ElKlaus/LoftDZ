@@ -139,6 +139,7 @@ body {
 .info-list {
 	list-style: none;
 	line-height: 56px;
+	border: 1px solid #b6b6b6;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
     background-color: #f3f1f0;
     background: -webkit-linear-gradient(270deg, rgba(9, 9, 9, .1) 0%, rgba(9, 9, 9, .3)1%, rgba(255,255,255, .5) 3%, rgba(200,200,200,.5)100%), -webkit-linear-gradient(left, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
@@ -147,9 +148,14 @@ body {
 
 }
 
-.info-list:hover, .info-list:active {
+.info-list:hover {
 	color: #1e7465;
-    background-color: #5dceb2;	
+    background-color: #e3e1e1;
+    background-image: linear-gradient(#e8e7e7 13%, #e3e1e1, #c2c0c0);
+    box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+}
+
+.about-list-active {
     background: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
     box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.35);
@@ -253,7 +259,7 @@ body {
 
 .content-about-title {
 	margin: 0px;
-	padding-left: 34px;
+	padding-left: 41px;
 	padding-top: 8px;
 	color: #eeedec;
 	font-family: 'open_sanssemibold';
@@ -267,7 +273,7 @@ body {
 }
 
 .content-body {
-	padding: 38px 34px;
+	padding: 38px 41px;
 	font-family: 'open_sansregular';
 	font-size: 14px;
 	color: #727070;
@@ -366,6 +372,7 @@ body {
 .expirience-list {
 	list-style: none;
 	margin: 0px;
+	padding: 0px 41px;
 }
 
 .expirients-point {
