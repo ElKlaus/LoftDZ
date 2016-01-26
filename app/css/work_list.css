@@ -3,3 +3,69 @@
     margin: 40px auto 80px;
     text-align: left;
 }
+
+.work_list_points {
+    position: relative;
+    display: inline-block;
+    width: 166px;
+    border-radius: 4px;
+    overflow: hidden;
+    vertical-align: top;
+    border: 1px solid #d2d2d2;
+}
+
+.list_of_works_text {
+    display: block;
+    font-family: open_sanslight, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #727070;
+    background-color: #fff;
+    margin: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+/*Начало */
+.projects-item {
+    width: 183px;  
+    position: relative;
+    margin: 20px;
+}
+.projects-item .project-img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.projects-item .zoom-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    text-align: center;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+.projects-item:hover .zoom-wrapper {	
+	transform: scale(1);
+	-webkit-transform: scale(1);
+}
+.projects-item .zoom-link {
+    font-size: 12px;
+    border: 1px solid #eff3f7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0 4px;
+}
+.projects-item:hover .project-img{
+	-moz-opacity: 0.20;
+	opacity:.20;
+	filter: alpha(opacity=20);
+}
+.projects-item:hover .hover-img{
+	background-color: rgb( 108, 108, 164);
+}
+
+/*Конец*/
