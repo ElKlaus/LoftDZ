@@ -104,6 +104,32 @@
 /*Конец*/
 
 
+
+.add-link-img {
+    background-image: url(../img/about_icons.png);
+    background-repeat: no-repeat;
+    background-position: 18px -57px;
+    display: inline-block;
+    position: absolute;
+    margin: 0px;
+    width: 54px;
+    top: 39px;
+    right: 57px;
+    height: 54px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004), inset 2px 3px 0px 0px rgba(199, 199, 199, 0.75);
+
+}
+
+.add-link-span {
+	font-family: OpenSans-Semibold, sans-serif;
+    font-size: 14px;
+    top: 52px;
+    position: absolute;
+    width: 119px;
+    left: -26px;	
+}
+
 .link-add-work {
 	height: 131px;
 }
@@ -117,11 +143,5 @@
 }
 
 .hover-img-bg {
-    font-size: 14px;
-    line-height: 22px;
-    color: #727070;
-    position: relative;
-    text-align: center;
-    background: url(../jpg/about_icons.png) center 0 no-repeat;
-    font-family: OpenSans-Semibold, sans-serif;
+
 }
