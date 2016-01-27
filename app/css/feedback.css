@@ -78,7 +78,7 @@
 	width: 190px;
 	height: 80px;
 	overflow: hidden;
-	background: #fff url(../pic/captcha-bg.png) center center no-repeat;
+	background: #fff center center no-repeat;
 }
 
 .captcha_input {
