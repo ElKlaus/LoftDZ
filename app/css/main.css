@@ -213,6 +213,10 @@ body {
 	text-decoration: underline;	
 }
 
+.skype-link {
+	border-radius: 0px 0px 4px 4px;
+}
+
 .contacts-info-link {
     background-image: url('../img/contacts.png');
     background-repeat: no-repeat;
@@ -278,7 +282,7 @@ body {
 }
 
 .content-info {
-	margin: 10px 0px 0px 0px;
+	margin: 0px 0px 5px 0px;
 	display: inline-block;	
 }
 
@@ -301,6 +305,10 @@ body {
 
 .avatar-logo {
 	width: 100%;
+}
+
+.skills-box-p {
+	margin-top: 10px;
 }
 
 .skills-box {
