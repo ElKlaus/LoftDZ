@@ -114,7 +114,7 @@
 .feedback_submit {
 	border: 1px solid #d6d4d3;
 	background-image: linear-gradient(rgba(251,249,249,0), #e9e7e7);
-	color: #727070;
+	color: #888;
 }
 
 .feedback_reset {
