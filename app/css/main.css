@@ -145,11 +145,17 @@ body {
 	box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
 }
 
+
 .info-list:hover {
 	color: #1e7465;
     background-color: #e3e1e1;
     background-image: linear-gradient(#e8e7e7 13%, #e3e1e1, #c2c0c0);
     box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+}
+
+.info-list-middle {
+	border-top: none;
+	border-bottom: none;
 }
 
 .about-list-active {
