@@ -97,9 +97,11 @@
 }
 
 .buttons {
-	margin-top: 30px;
-	margin-bottom: 100px;
-	float: left;
+    width: 350px;
+    margin: 0 32px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    float: left;
 }
 
 .feedback_button {

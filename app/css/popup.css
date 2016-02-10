@@ -1,0 +1,113 @@
+.popup-class {
+	width: 438px;
+	height: 558px;
+}
+
+.popup-title {
+	margin: 0px;
+	font-family: open_sanslight;
+	font-size: 16px;
+	color: #f8f7f6;
+	padding-left: 26px;
+}
+
+.close-href {
+    width: 17px;
+    height: 16px;
+    background-image: url(../img/close_bg.png);
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    margin: 8px;
+}
+
+.popap-form-wrap {
+	background-color: #f3f3f2;
+	border: 1px solid #d3d3d2;
+	border-radius: 5px;
+	
+}
+
+.popup-form {
+	padding: 29px 0px 0px 26px;
+}
+
+.label {
+	font-family: open_sansregular;
+	font-size: 16px;
+	color: #727070;
+	margin-bottom: 16px;
+}
+
+.input {
+	width: 372px;
+	height: 47px;
+	border-radius: 5px;
+	font-family: open_sanslight;
+	font-size: 14px;
+	color: #c5c5c5;
+	padding-left: 9.9px;
+	margin: 15px 0px 13px 0px;
+}
+
+.add-img-input {
+	z-index: -1;
+	position: absolute;
+	width: 372px;
+	height: 47px;
+}
+
+.psevdo-input {
+	display: inline-block;
+}
+
+.project-image {
+    width: 309px;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid #cdcdca;
+    height: 34px;
+    padding-top: 13px;
+}
+
+.add-img-cloud {
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+    margin-top: 1px;
+    border: 1px solid #c1c0c0;
+    border-radius: 0px 5px 5px 0px;
+    background-image: url(../img/add_img_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;	
+    width: 62px;
+    height: 47px;  
+    display: inline-block; 
+    float: right;
+    margin-top: 15px;
+}
+
+.project-about {
+	height: 131px;
+	margin-bottom: 15px;
+} 
+
+.add_button {
+	font-family: "open_sansbold", sans-serif;
+    color: rgb(30, 116, 101);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+	text-align: center;
+	margin-bottom: 39px;
+}
+
+.add_pro_button:hover {
+  background-image: -moz-linear-gradient( 90deg, rgb(101,159,135) 0%, rgb(144,219,189) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(101,159,135) 0%, rgb(144,219,189) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(101,159,135) 0%, rgb(144,219,189) 100%);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+/* Скрываем модальное окно 
+
+#project-popup {
+	display: none;
+}*/
