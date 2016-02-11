@@ -5,6 +5,7 @@
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- css -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<link rel="stylesheet" href="fonts/stylesheet.css">	
 	<link rel="stylesheet" href="css/main.css">
@@ -163,23 +164,18 @@
 										</div>
 									</li>
 									<li class="work-list-points link-add-work">
-										<div class="projects-item">
-											<div class="add-link-img"><span class="add-link-span">Добавить проект</span></div>
-											<div class="hover-img"><div class="project-img  link-add-project"></div>
-											    <div class="zoom-wrapper ">
-											      <a href="yasnow.biz" target="_blank" class="zoom-link">Добавить</a>
-											    </div>
-										    </div>
-										</div>
+										<a id="add-new-item" href="#" class="add-project-link">
+											Добавить проект
+										</a>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</section>
 					<div id="project-popup" class="popup-class">
-						<h4 class="popup-title">Добавление проекта</h4>		
+						<h4 class="popup-title">Добавление проекта</h4>	
 						<div class="popap-form-wrap">
-							<a href="#" class="close-href"></a>
+							<a href="#" id="close-href" class="close-href b-close"></a>
 							<form id="add-project" role="form" class="popup-form">
 								<div class="popap-form-block">
 									<label for="project-name" class="label">Название проекта</label>
@@ -203,10 +199,10 @@
 									<label for="project-about" class="label">Описание</label>
 									<input id="project-about" name="project-about" placeholder="Пара слов о Вашем проекте" qtip-content="" class="input project-about" type="text">
 								</div>
+								<div class="add_button">
+									<button class="feedback_button feedback_submit add_pro_button" type="submit">Добавить</button>
+								</div>							
 							</form>
-							<div class="add_button">
-								<input class="feedback_button feedback_submit add_pro_button" type="submit" value="Добавить">
-							</div>
 						</div>
 					</div>			
 				</div>
@@ -222,6 +218,7 @@
 	</footer>
 	<!-- JS -->
 	<script src="bower/jquery/jquery.js"></script>
+	<script src="bower/bPopup/jquery.bpopup.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

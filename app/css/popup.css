@@ -48,6 +48,7 @@
 	color: #c5c5c5;
 	padding-left: 9.9px;
 	margin: 15px 0px 13px 0px;
+	border: 1px solid #cdcdca;
 }
 
 .add-img-input {
@@ -69,6 +70,7 @@
     border: 1px solid #cdcdca;
     height: 34px;
     padding-top: 13px;
+    border-right: none;
 }
 
 .add-img-cloud {
@@ -106,8 +108,8 @@
   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
 }
 
-/* Скрываем модальное окно 
+/* Скрываем модальное окно */
 
 #project-popup {
 	display: none;
-}*/
+}
