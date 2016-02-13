@@ -11,7 +11,7 @@
 		};
 		
 	var _showModal = function (ev) {
-		ev.preventDefault;
+		ev.preventDefault();
 		$('#project-popup').bPopup({
 			speed:650,
 			transition: 'slideDown'
@@ -20,33 +20,35 @@
 
 	var _addProject = function  (ev) {		
 		console.log('Send to project');
-		ev.preventDefault;
+		ev.preventDefault();
 
 		//Объявляем переменные 
 		var form = $(this),
 			url = 'add_project.php',
 			data = form.serialize();
+
 		console.log(data);
 
 
-		//Запрос на сервер 
-		/*$.ajax({
-			url: '/path/to/file',
+		//Запрос на сервер /**/
+		$.ajax({
+			url: url,
 			type: 'POST',
 			dataType: 'json',
-			data: data
+			data: data,
 		})
 		.done(function(ans) {
-			console.log("success");
-			console.log("ans");
+			console.log('5656544ans');
+			console.log(ans);
+			if(ans.status === 'OK'){
+				form.find('.success-mes').text(ans.text);
+			}else{
+				form.find('.error-mes').text(ans.text);
+			}
 		})
 		.fail(function() {
 			console.log("error");
 		})
-		.always(function() {
-			console.log("complete");
-		});*/
-		
 	}
 
 
