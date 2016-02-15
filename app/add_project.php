@@ -4,7 +4,7 @@
 	$data = array();
 
 	
-	$data =['mes'] ='OK';
+	$data['mes'] = 'OK';
 
 	if ($name === '') {
 		$data['status'] = 'error';

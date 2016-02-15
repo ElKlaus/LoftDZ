@@ -12,9 +12,15 @@
 		
 	var _showModal = function (ev) {
 		ev.preventDefault();
-		$('#project-popup').bPopup({
+		var divPopup = $('#project-popup'),
+			form = divPopup.find('.popup-form');
+
+		divPopup.bPopup({
 			speed:650,
-			transition: 'slideDown'
+			transition: 'slideDown',
+			onClose: function  () {
+				form.find('.server-mes').text('').hide();
+			}
 		});
 	};
 
@@ -38,17 +44,22 @@
 			data: data,
 		})
 		.done(function(ans) {
-			console.log('5656544ans');
 			console.log(ans);
 			if(ans.status === 'OK'){
-				form.find('.success-mes').text(ans.text);
+				console.log(ans.text);				
+				form.find('.success-mes').text(ans.text).show();
 			}else{
-				form.find('.error-mes').text(ans.text);
+				console.log(ans.text);	
+				form.find('.error-mes').text(ans.text).show();
 			}
 		})
 		.fail(function() {
 			console.log("error");
 		})
+	};
+
+	var _ajaxForm = function () {
+		//
 	}
 
 

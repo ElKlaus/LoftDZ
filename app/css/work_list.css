@@ -103,44 +103,38 @@
 
 /*Конец*/
 
+.link-add-work {
+	height: 131px;
+}
 
 
-.add-link-img {
+
+.add-project-link {
     background-image: url(../img/about_icons.png);
     background-repeat: no-repeat;
     background-position: 18px -57px;
     display: inline-block;
     position: absolute;
-    margin: 0px;
+    margin-bottom: 15px;
     width: 54px;
-    top: 39px;
+    top: 25px;
     right: 57px;
     height: 54px;
     border-radius: 50%;
-    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004), inset 2px 3px 0px 0px rgba(199, 199, 199, 0.75);
-
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004), inset 1px 3px 10px 0px rgba(199, 199, 199, 0.75);
 }
 
 .add-link-span {
 	font-family: OpenSans-Semibold, sans-serif;
     font-size: 14px;
+    color: #727070;
     top: 52px;
     position: absolute;
     width: 119px;
     left: -26px;	
 }
 
-.link-add-work {
-	height: 131px;
-}
 
-.link-add-project {
-    display: inline-block;
-    text-decoration: none;
-    margin: auto;
-    padding-top: 104px;
-    margin-top: 25px;
-}
 
 .hover-img-bg {
 
