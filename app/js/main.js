@@ -1,15 +1,19 @@
 ;var myModule = (function () {
 
+
+	// Инициализирует наш модуль
 	var init = function () {
 		_setUpListners();
 		//То что должно произойти сразу
 	};
 
+	// Прослушивает события
 	var _setUpListners = function  () {
 		$('#add-new-item').on('click', _showModal); //Открыть модальное окно
 		$('#add-project').on('submit', _addProject); //Добавление пректа
 		};
-		
+	
+	// Работает с модальным окном	
 	var _showModal = function (ev) {
 		ev.preventDefault();
 		var divPopup = $('#project-popup'),
@@ -24,45 +28,60 @@
 		});
 	};
 
+	// Добавляет проект
 	var _addProject = function  (ev) {		
-		console.log('Send to project');
+		console.log('Добавление проекта');
 		ev.preventDefault();
 
 		//Объявляем переменные 
 		var form = $(this),
 			url = 'add_project.php',
-			data = form.serialize();
-
-		console.log(data);
+			myServerGiveMeAnswer = _ajaxForm(form, url);
 
 
 		//Запрос на сервер /**/
-		$.ajax({
+		
+		myServerGiveMeAnswer.done(function(ans) {
+			var successBox = form.find('.success-mes'),
+				errorBox = form.find('.error-mes')
+			if(ans.status === 'OK'){
+				errorBox.hide();
+				successBox.text(ans.text).show();
+			}else{
+				successBox.hide();
+				errorBox.text(ans.text).show();
+			}
+		})
+	};
+
+
+	// Универсальная функция
+	// Лля ее работы используются 
+	// @form - форма
+	// @url - адрес php файла, к которому мы обращаемся
+	// 1. собирает данные из формы
+	// 2. проверяет форму
+	// 3. делает запрос на сервер и возвращает ответ с сервера
+	var _ajaxForm = function (form, url) {
+
+		//if(!valid) return false;
+
+		data = form.serialize();
+
+		var result = $.ajax({
 			url: url,
 			type: 'POST',
 			dataType: 'json',
 			data: data,
-		})
-		.done(function(ans) {
-			console.log(ans);
-			if(ans.status === 'OK'){
-				console.log(ans.text);				
-				form.find('.success-mes').text(ans.text).show();
-			}else{
-				console.log(ans.text);	
-				form.find('.error-mes').text(ans.text).show();
-			}
-		})
-		.fail(function() {
-			console.log("error");
-		})
+		}).fail( function (ans) {
+			console.log('проблемы в PHP');
+			form.find('.error-mes').text('На сервере произошла ошибка').show();
+		});
+
+		return result;
 	};
 
-	var _ajaxForm = function () {
-		//
-	}
-
-
+	// Возвращаем объект (публичные методы)
 	return {
 		init: init
 	};

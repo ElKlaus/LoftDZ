@@ -131,11 +131,14 @@
     top: 52px;
     position: absolute;
     width: 119px;
-    left: -26px;	
+    left: -26px;
+    margin-top: 15px;	
 }
 
+.link-add-work:hover {
+	background-color: #bfbdbd;
+}
 
-
-.hover-img-bg {
-
+.add-project-link:hover {
+	background-color: none;
 }

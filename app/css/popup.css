@@ -32,12 +32,36 @@
 	padding: 29px 0px 0px 26px;
 }
 
+.server-mes {
+	border: 1px solid;
+	border-radius: 4px;
+	padding: 6px 12px;
+	margin-bottom: 6px;
+	width: 357px;
+	height: 61px;
+	font-size: 16px;
+	display: none;
+}
+
+.error-mes {
+	background-color: #e0c8bd;
+	border-color: #c68f76;
+	color: #c68f76;		
+}
+
+.success-mes {
+	background-color: #cbe1cc;
+	border-color: #8ec593;
+	color: #8ec593;	
+}
+
 .label {
 	font-family: open_sansregular;
 	font-size: 16px;
 	color: #727070;
 	margin-bottom: 16px;
 }
+
 
 .input {
 	width: 372px;
