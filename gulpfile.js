@@ -1,6 +1,7 @@
 var gulp = require("gulp"),
     browserSync = require('browser-sync');
     modernizr = require('gulp-modernizr');
+    concatCss = require('gulp-concat-css');
 
 
 gulp.task('modernizr', function() {
@@ -41,6 +42,13 @@ gulp.task('watch', function () {
     'app/css/**/*.css'
   ]).on('change', browserSync.reload);
 });
+
+// Конкатенация CSS
+gulp.task('concatCss', function () {
+  return gulp.src('app/**/*.css')
+      .pipe(concatCss('fullstyle.css'))
+      .pipe(gulp.dest('app/css/'));
+})
 
 // Задача по-умолчанию
 gulp.task('default', ['modernizr','server', 'watch']);
