@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="css/work_list.css">
 	<link rel="stylesheet" href="css/popup.css">
 	<link rel="stylesheet" href="css/feedback.css">
+	<!-- bower CSS -->
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 	<!--Modernizr-->
 	<script src="js/vendor/modernizr.js"></script>
 </head>
@@ -199,7 +201,7 @@
 								</div>
 								<div class="popap-form-block">
 									<label for="project-about" class="label">Описание</label>
-									<input id="project-about" name="project-about" placeholder="Пара слов о Вашем проекте" qtip-content="" class="input project-about" type="text">
+									<textarea id="project-about" name="project-about" placeholder="Пара слов о Вашем проекте" qtip-content="" class="input project-about" type="text"></textarea>
 								</div>
 								<div class="add_button">
 									<button class="feedback_button feedback_submit add_pro_button" type="submit">Добавить</button>
@@ -220,7 +222,9 @@
 	</footer>
 	<!-- JS -->
 	<script src="bower/jquery/jquery.js"></script>
+	<script src="bower/qtip2/jquery.qtip.js"></script>
 	<script src="bower/bPopup/jquery.bpopup.js"></script>
+	<script src="js/validation.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

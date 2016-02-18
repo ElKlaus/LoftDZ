@@ -7,11 +7,14 @@
 	<!-- css -->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
-	<link rel="stylesheet" href="fonts/stylesheet.css">	
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="css/work_list.css">	
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/feedback.css">
 	<!--Modernizr-->
 	<script src="js/vendor/modernizr.js"></script>
+	<!-- bower CSS -->
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -101,14 +104,14 @@
 						<div class="content-about">
 							<div class="content-body">			
 								<div class="feedback">
-									<form class="feedback_form clearfix" action="">
+									<form id="contact_me" class="feedback_form clearfix" action="">
 										<div class="feedback_name_email">
 											<label class="form_text" for="feedback_input_name">Имя</label>
-											<input class="feedback_input name" id="feedback_input_name" type="text" placeholder="Как к вам обращаться">
+											<input class="feedback_input name" id="feedback_input_name" type="text" placeholder="Как к вам обращаться" qtip-content="Введите имя" qtip-positon="left">
 										</div>
 										<div class="feedback_name_email">
 											<label class="form_text" for="feedback_input_email">Email</label>
-											<input class="feedback_input e-mail" id="feedback_input_email" type="text" placeholder="Куда мне писать">
+											<input class="feedback_input e-mail" id="feedback_input_email" type="text" placeholder="Куда мне писать" qtip-content="Введите email" qtip-positon="right">
 										</div>
 										<div class="feedback_message">
 											<label class="form_text" for="feedback_message">Сообщение</label>
@@ -142,5 +145,9 @@
 	<!-- JS -->
 	<script src="bower/jquery/jquery.js"></script>
 	<script src="js/main.js"></script>
+	<script src="bower/qtip2/jquery.qtip.js"></script>
+	<script src="bower/bPopup/jquery.bpopup.js"></script>
+	<script src="js/validation.js"></script>
+	<script src="js/contact_me.js"></script>	
 </body>
 </html>

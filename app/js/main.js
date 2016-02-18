@@ -64,7 +64,7 @@
 	// 3. делает запрос на сервер и возвращает ответ с сервера
 	var _ajaxForm = function (form, url) {
 
-		//if(!valid) return false;
+		if (!validation.validateForm(form)) return false;
 
 		data = form.serialize();
 

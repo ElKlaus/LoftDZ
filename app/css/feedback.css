@@ -141,3 +141,8 @@
     background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
     box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
 }
+
+/*Подсвечивание ошибки для валидации*/
+.has-error {
+	border: 1px solid rgb(211,118,84);
+}
