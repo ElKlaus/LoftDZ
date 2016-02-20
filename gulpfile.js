@@ -7,7 +7,10 @@ var gulp = require("gulp"),
     useref = require('gulp-useref'),
     uglify = require('gulp-uglify'),
     gulpif = require('gulp-if'),
-    minifyCss = require('gulp-minify-css');
+    minifyCss = require('gulp-minify-css'),
+    filter = require('gulp-filter'),
+    imagemin = require('gulp-imagemin'),
+    size = require('gulp-size');
 
 
 // Следим за bower
@@ -66,12 +69,12 @@ gulp.task('concatCss', function () {
       .pipe(gulp.dest('app/css/'));
 })
 
-// Сборка
+// СБОРКА
 // Переносим HTML, CSS, JS в папку dist
-gulp.task('useref,' function () {
+gulp.task('useref', function () {
   return gulp.src('app/*.html')
     .pipe(useref())
-    .gulp(gulpif('*.js', uglify()))
+    .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', minifyCss({compatibility: 'ie8'})))
     .pipe(gulp.dest('dist'));
 })
@@ -81,6 +84,41 @@ gulp.task('clean', function() {
   return gulp.src('dist', {read: false}) // much faster
   .pipe(rimraf());
 })
+
+// Перенос шрифтов
+gulp.task('fonts', function() {
+  gulp.src('app/fonts/*')
+  .pipe(filter(['*.eot','*.svg','*.ttf','*.woff','*.woff2']))
+  .pipe(gulp.dest('dist/fonts/'))
+})
+
+// Картинки
+gulp.task('images', function() {
+  return gulp.src('app/img/**/*')
+  .pipe(imagemin({
+    progressive:true,
+    interlaced: true
+  }))
+  .pipe(gulp.dest('dist/img'));
+})
+
+//Остальные файлы, такие как favicon.ico и пр.
+gulp.task('extras', function() {
+  return gulp.src([
+    'app/*.*',
+    '!app/*.html'
+  ]).pipe(gulp.dest('dist'));
+})
+
+// Собираем папку DIST (только после компиляции Jsde)
+gulp.task('build', ['clean'], function () {
+  gulp.start('dist');
+});
+
+// Сборка и вывод содержимого папки dist
+gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function () {
+  return gulp.src('dist/**/*').pipe(size({title: 'build'}));
+});
 
 // Задача по-умолчанию
 gulp.task('default', ['modernizr','server', 'watch']);
