@@ -4,11 +4,27 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- css -->
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
-	<link rel="stylesheet" href="fonts/stylesheet.css">	
+
+	<!-- build:css css/vendor.min.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
+	<!-- endbower -->
+	<!-- endbuild -->
+
+
+	<!-- build:css css/main.min.css -->
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/work_list.css">
+	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/feedback.css">
+	<!-- endbuild -->
+
+	<!-- build:css fonts/fints.min.css -->
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<!-- endbuild -->
+
 	<!--Modernizr-->
 	<script src="js/vendor/modernizr.js"></script>
 </head>
@@ -202,8 +218,14 @@
 		</div>
 	</footer>
 
-	<!-- JS -->
+
+	<!-- bower:js -->
 	<script src="bower/jquery/jquery.js"></script>
+	<script src="bower/bPopup/jquery.bpopup.js"></script>
+	<script src="bower/qtip2/jquery.qtip.js"></script>
+	<script src="bower/qtip2/basic/jquery.qtip.js"></script>
+	<!-- endbower -->
+	<!-- JS -->
 	<script src="js/main.js"></script>
 </body>
 </html>

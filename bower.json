@@ -5,5 +5,16 @@
     "normalize-css": "normalize.css#~3.0.3",
     "bPopup": "bpopup#~0.11.0",
     "qtip2": "~2.2.1"
+  },
+  "overrites" : {
+  	"qtip2" : {
+  		"main" : [
+  			"./jquery.qtip.js"
+  			"./jquery.qtip.css"
+  		],
+      "dependencies": {
+        "jquery": ">=1.6.0"
+      }
+  	}
   }
 }
